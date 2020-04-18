@@ -51,7 +51,7 @@ header>.container {
     height: 50px;
     display: flex;
     background-color: auto;
-    color: orange;
+    color: #c69963;
     border-radius: 4px;
     cursor: pointer;
     z-index: 999;
@@ -161,6 +161,93 @@ header>.container {
     background-color: #c69963;
 }
 
+
+/* Menu */
+
+.menu {
+    background-color: #101D2C;
+}
+
+.shop-info i {
+    columns: #c69963;
+    font-size: 50px;
+}
+
+.shop-info h1 {
+    font-family: 'Teko', sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.shop-info p,
+.shop-info address {
+    color: rgba(255, 255, 255, .5);
+}
+
+hr {
+    border-top: 1px solid rgba(255, 255, 255, .05);
+}
+
+.point-right,
+.point-left {
+    position: relative;
+    background-color: #fff;
+    display: flex;
+}
+
+.point-left::before,
+.point-right::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: inherit;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: 1;
+}
+
+.menu-item-desc {
+    padding: 50px 10px;
+    color: #212592;
+    margin: auto;
+}
+
+.menu-item-desc h6 {
+    color: #c69963;
+    font-size: 20px;
+}
+
+.menu-item-desc h1 {
+    color: #101D2C;
+    font-size: 30px;
+    letter-spacing: 1px;
+    font-family: 'Teko', sans-serif;
+    font-weight: 300;
+}
+
+
+/* Profile section */
+
+.card-body h1 {
+    font-size: 25px;
+    letter-spacing: 1px;
+    font-family: 'Teko', sans-serif;
+    font-weight: 300;
+}
+
+.card-body h6 {
+    font-size: 16px;
+    color: #c69963;
+}
+
+footer {
+    background-color: #101D2C;
+    color: rgba(255, 255, 255, .5);
+}
+
 @media (min-width: 576px) {
     .navbar-brand {
         max-width: 150px;
@@ -168,6 +255,13 @@ header>.container {
     .hamburger-menu {
         top: 35px;
         right: 25px;
+    }
+    .point-right::before,
+    .point-left::before {
+        display: none;
+    }
+    .menu-item-desc {
+        padding: 50px 20px;
     }
 }
 
@@ -224,5 +318,28 @@ header>.container {
     }
     .nav-link:hover::before {
         transform: scaleX(1)
+    }
+}
+
+@media (min-width:1200px) {
+    .point-right::before,
+    .point-left::before {
+        display: block;
+        top: 50%;
+        left: initial;
+        transform: translate(0, -50%) rotate(45deg);
+    }
+    .point-left::before {
+        left: -12px;
+    }
+    .point-right::before {
+        left: -12px;
+    }
+    .menu-item-desc p {
+        display: none;
+    }
+    .menu-item-desc .btn {
+        color: #fff !important;
+        background-color: #c69963;
     }
 }
