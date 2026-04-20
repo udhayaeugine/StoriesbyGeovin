@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Niconne&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Teko:300,400&display=swap');
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'fangsong';
+}
+
 a {
     color: #fff !important;
 }
@@ -18,7 +27,14 @@ section {
 header {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(rgba(16, 29, 44, .95), rgba(16, 29, 44, .95)), url("images/header-bg.jpg") center no-repeat;
+    /* background: linear-gradient(rgba(16, 29, 44, .95), rgba(16, 29, 44, .50)), url("images/paul.jpg") top no-repeat; */
+    background:
+  linear-gradient(rgba(16, 29, 44, .95), rgba(16, 29, 44, .80)),
+  url("images/church.png") no-repeat;
+
+background-position: center;
+background-size: center;
+    /* background:linear-gradient(rgba(16, 29, 44, 0.5), rgba(16, 29, 44, 0.5)), url("images/paul1.png") center center / cover no-repeat; */
     background-size: cover;
     position: relative;
 }
@@ -57,6 +73,10 @@ header>.container {
     z-index: 999;
 }
 
+.img-fluid{
+    border-radius: 50%;
+}
+
 .hamburger-menu i {
     font-size: 30px;
     color: #fff;
@@ -90,6 +110,7 @@ header>.container {
     opacity: 0;
     transform: scale(0);
     transition: opacity 650ms;
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.7);
 }
 
 .nav-list.open {
@@ -107,7 +128,14 @@ header>.container {
 
 .hero-text h1 {
     font-family: "Niconne", cursive;
-    color: #c69963;
+    color: darkred;
+    font-size: 4.5rem;
+
+    /* clean outline */
+    -webkit-text-stroke: 1.5px white;
+
+    /* inner glow */
+    text-shadow: 2px 2px 8px rgba(255,255,255,0.7);
 }
 
 .btn {
@@ -295,7 +323,7 @@ footer {
         padding: 0;
     }
     .nav-item {
-        margin: 0 30px;
+        margin: 20px 30px;
     }
     .nav-item:last-child {
         margin-right: 0;
